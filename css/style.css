@@ -99,10 +99,7 @@ h6{
     font-weight: 300;
     margin-top: 30px;
 }
-
-
-.formulario{
-    
+.formulario{    
     width: 70%;
 }
 .form-control{
@@ -113,10 +110,65 @@ h6{
     margin-top: 10px;
     background: rgb(110, 181, 22);
 }
+/*formulario2*/
+.tickets{ 
+    display: inline-block;
+    margin-top: 100px;
+    margin-left: 290px; 
+      
+}
+#tickets1,#tickets2,#tickets3{  
+    text-align: center;
+    margin:0 3px;
+}
+.card-title{
+    font-size:20px;
+}
+.descuento{
+   font-weight: bolder;
+   font-size: 20px;
+}
+.titulo{
+    text-align: center;
+}
+.sub-titulo{
+    text-align: center;
+}
+
+.valor{
+    background-color: lightblue;
+    border-radius: 5px;
+    height: 3em;   
+    margin-bottom: 10px;
+}
+#cantidad{
+
+    margin-top: 10px;
+    height: 2em;
+    width: 20em;
+}
+
+#borrar{
+    
+    border-color: rgb(108, 193, 22);
+    background-color: rgb(108 , 193, 22);
+    color:white;       
+    margin-bottom: 5px;
+    width:49%;
+}
+#resumen{
+    border-color: rgb(108, 193, 22);
+    background-color:rgb(108, 193, 22) ;
+    color:white;
+    margin:0px;    
+    margin-bottom: 5px;
+    width: 50%;
+    
+}
+
 .footer{
     height: 80px;
-    text-align: start;
-    
+    text-align: start;    
     background:linear-gradient( to right, rgb(29,55,68),rgb(29,82,113));
     margin:auto;
 }
