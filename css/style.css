@@ -112,9 +112,7 @@ h6{
 }
 /*formulario2*/
 .tickets{ 
-    display: inline-block;
-    margin-top: 100px;
-    margin-left: 290px; 
+    margin-top: 100px; 
       
 }
 #tickets1,#tickets2,#tickets3{  
@@ -148,24 +146,21 @@ h6{
     width: 20em;
 }
 
-#borrar{
-    
+#borrar{    
     border-color: rgb(108, 193, 22);
     background-color: rgb(108 , 193, 22);
     color:white;       
-    margin-bottom: 5px;
-    width:49%;
+    margin-bottom: 10px;
+    
+    
 }
 #resumen{
     border-color: rgb(108, 193, 22);
     background-color:rgb(108, 193, 22) ;
-    color:white;
-    margin:0px;    
-    margin-bottom: 5px;
-    width: 50%;
+    color:white;   
+    margin-bottom: 10px;
     
 }
-
 .footer{
     height: 80px;
     text-align: start;    

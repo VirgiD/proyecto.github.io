@@ -14,7 +14,7 @@
   <nav class="navbar navbar-expand-lg bg-secondary bg-dark navbar-dark fixed-top">
     <div class="container-fluid encabezado">
       <a class="navbar-brand text-white" href="#">
-        <img src="/assets/img/codoacodo.png" alt="Logo" width="100" class=" d-inline-block align-text-center">
+        <img src="../assets/img/codoacodo.png" alt="Logo" width="100" class=" d-inline-block align-text-center">
         Conf Bs As
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -33,42 +33,31 @@
         </div>
       </div>
   </nav>
+  <section class="container tickets">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="card-body border border-primary border-2 my-2" id="tickets1">
+          <h5 class="card-title">Estudiante</h5>
+          <p class="card-text">Tiene un descuento</p>
+          <p class="descuento">80%</p>
+          <p>*presentar documentación</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card-body border border-success border-2 my-2" id="tickets2">
+          <h5 class="card-title">Trainee</h5>
+          <p class="card-text">Tiene descuento</p>
+          <p class="descuento">50%</p>
+          <p>*presentar documentación</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
 
-  <section class="tickets">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-md-3 ">
-        <div class="col p-0">
-          <div class="card p-0 text-bg-light md-3 border-primary center" id="tickets1"
-            style="max-width: 18rem;border-radius: 0%;border-width:2px;">
-            <div class="card-body" id="tickets1">
-              <h5 class="card-title">Estudiante</h5>
-              <p class="card-text">Tiene un descuento</p>
-              <p class="descuento">80%</p>
-              <p>*presentar documentación</p>
-            </div>
-          </div>
-        </div>
-        <div class="col p-0">
-          <div class="card text-bg-light md-3 border-success" id="tickets2"
-            style="max-width: 18rem;border-radius: 0%;border-width:2px;">
-            <div class="card-body" id="tickets2">
-              <h5 class="card-title">Trainee</h5>
-              <p class="card-text">Tiene descuento</p>
-              <p class="descuento">50%</p>
-              <p>*presentar documentación</p>
-            </div>
-          </div>
-        </div>
-        <div class="col p-0">
-          <div class="card text-bg-light mb-3 border-warning" id="tickets3"
-            style="max-width: 18rem;border-radius: 0%;border-width:2px;">
-            <div class="card-body" id="tickets3">
-              <h5 class="card-title">Junior</h5>
-              <p class="card-text">Tiene descuento</p>
-              <p class="descuento">15%</p>
-              <p>*presentar documentación</p>
-            </div>
-          </div>
+        <div class="card-body border border-warning border-2 my-2" id="tickets3">
+          <h5 class="card-title">Junior</h5>
+          <p class="card-text">Tiene descuento</p>
+          <p class="descuento">15%</p>
+          <p>*presentar documentación</p>
         </div>
       </div>
     </div>
@@ -76,40 +65,45 @@
       <p class="titulo">VENTA</p>
       <h1 class="sub-titulo">VALOR DE TICKET $200</h1>
     </div>
-    <form action="">
+    <form action="" id="formulario">  
       <div class="row">
         <div class="col p-1">
-          <input type="text" class="form-control" name="nombre" placeholder="Nombre" aria-label="Nombre">
+          <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" aria-label="Nombre">
         </div>
         <div class="col p-1" id="categoria">
-          <input type="text" class="form-control" name="apellido" placeholder="Apellido" aria-label="Apellido">
+          <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido"
+            aria-label="Apellido">
         </div>
         <div class="col-12 p-0">
-          <input type="email" class="form-control" name="email" id="inputAddress" placeholder="correo electrónico">
+          <input type="email" class="form-control" name="email" id="email" placeholder="correo electrónico">
         </div>
       </div>
       <div class="row">
         <div class="col-6 pt-1">
           <label for="cantidad" class="from-label">Cantidad</label><br>
-          <input type="number" id="cantidad" class="form-control">
+          <input type="number" id="cantidad" name="cantidad" class="form-control">
         </div>
         <div class="col-6">
-          <label for="categoria" class="form-label" >Categoria</label>
-          <select id="categoria" class="form-select">
-            <option selected id="estudiante">Estudiante</option>
-            <option selcted id="trainee">Trainee</option>
-            <option selected id="junior">Junior</option>
-            <option selected id="sinCategoria">Sin categoría</option>
+          <label for="categoria" class="form-label">Categoria</label>
+          <select id="categoria" class="form-select" name="categoria">
+            <option value="0.2">Estudiante</option>
+            <option value="0.5">Trainee</option>
+            <option value="0.85">Junior</option>
+            <option value="1">Sin categoría</option>
           </select>
-        </div>           
-      </div>   
-      <div class="row mb-3 mt-4 mb-4 valor">
-        <label for="imputTotal" class="col 6 mt-2" id="total">Total a pagar $</label>
+        </div>
       </div>
-      <div class="botones mb-4">
-        <button class="btn btn-success col" type="button" id="borrar">Borrar</button>
-        <button class="btn btn-success col" type="button" value="resumen" id="resumen"
-          onclick="return validar(event,this.form)">Resumen</button>
+      <div class="row mb-3 mt-4 mb-4 valor">
+        <label for="imputTotal" class="col 6 mt-2">Total a pagar $ <span id="total"></span></label>
+      </div>
+      <div class="row">
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button class="btn  btn-success" type="button" value="borrar" id="borrar" onclick="borrarFormulario(event,this.form)">Borrar</button>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button class="btn btn-success" type="button" value="resumen" id="resumen"
+            onclick="return validar(event,this.form)">Resumen</button>
+        </div>
       </div>
     </form>
   </section>
@@ -134,7 +128,8 @@
       </div>
     </div>
   </footer>
-  <script src="/js/script.js"></script>
+  <script src="../js/script.js"></script>
   <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

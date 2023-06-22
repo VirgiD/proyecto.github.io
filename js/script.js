@@ -13,9 +13,19 @@ if(!re.test(formulario.email.value)){
 alert("debe ingresar un mail válido");
 return false;
 }
-return true;
+else{
+    const cantidad = parseInt(formulario.cantidad.value);
+    const categoria = parseFloat(formulario.categoria.value);
+
+
+    const resultado = cantidad * 200 * categoria;
+    document.getElementById("total").innerHTML = resultado;
+}
 }
 
-function captura(){
+//borrar
 
+function borrarFormulario(event,formulario) {
+  document.getElementById("formulario").reset();
 }
+
